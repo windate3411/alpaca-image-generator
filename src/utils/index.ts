@@ -1,5 +1,9 @@
 import mergeImages from 'merge-images'
 
+export const getRandomItem = (list: string[]) => {
+  return list[Math.floor(Math.random() * list.length)]
+}
+
 export const getImage = (imagePath: string[]) => {
   return mergeImages(imagePath).then((b64) => b64)
 }

@@ -1,4 +1,28 @@
-img {
-  height: 360px;
-  width: 360px;
+.component-preview {
+  img {
+    height: 360px;
+    width: 360px;
+  }
+
+  .footer-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      width: 48%;
+      padding: 18px 24px;
+      font-size: 18px;
+      font-weight: bold;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: transform 0.1s ease-in;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
 }

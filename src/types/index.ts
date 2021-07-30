@@ -12,19 +12,19 @@ export interface AlpacaImageTypeList {
   imageTypeList: AlpacaImageType[]
 }
 
-export interface imageMapping {
-  accessories: ['earings', 'flower', ' glasses', 'headphone']
-  ears: ['default', 'tilt-backward', 'tilt-forward']
-  eyes: ['default', 'angry', 'naughty', 'panda', 'smart', 'star']
-  hair: ['default', 'bang', 'curls', 'elegant', 'fancy', 'quiff', 'short']
+export const imageMapping: { [key: string]: string[] } = {
+  neck: ['default', 'bend-forward', 'bend-backward', 'thick'],
+  ears: ['default', 'tilt-backward', 'tilt-forward'],
+  hair: ['default', 'bang', 'curls', 'elegant', 'fancy', 'quiff', 'short'],
+  accessories: ['earings', 'flower', 'glasses', 'headphone'],
+  eyes: ['default', 'angry', 'naughty', 'panda', 'smart', 'star'],
+  mouth: ['default', 'astonished', 'eating', 'laugh', 'tongue'],
   leg: [
     'default',
     'bubble-tea',
     'cookie',
     'game-console',
     'tilt-backward',
-    'tilt-forward'
-  ]
-  mouth: ['default', 'astonished', 'eating', 'laugh', 'tongue']
-  neck: ['default', 'bend-forward', 'bend-backward', 'thick']
+    'tilt-forward',
+  ],
 }

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { ActionCreators, State } from '../state'
+import { imageMapping } from '../types'
 import { Button } from './Button'
 import './ControlPanel.scss'
 
@@ -12,23 +13,6 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({}) => {
   const dispatch = useDispatch()
   const bodyPart = useSelector((state: State) => state.bodyPart)
   const { setBodyPart } = bindActionCreators(ActionCreators, dispatch)
-
-  const imageMapping: { [key: string]: string[] } = {
-    hair: ['default', 'bang', 'curls', 'elegant', 'fancy', 'quiff', 'short'],
-    ears: ['default', 'tilt-backward', 'tilt-forward'],
-    eyes: ['default', 'angry', 'naughty', 'panda', 'smart', 'star'],
-    mouth: ['default', 'astonished', 'eating', 'laugh', 'tongue'],
-    neck: ['default', 'bend-forward', 'bend-backward', 'thick'],
-    leg: [
-      'default',
-      'bubble-tea',
-      'cookie',
-      'game-console',
-      'tilt-backward',
-      'tilt-forward',
-    ],
-    accessories: ['earings', 'flower', 'glasses', 'headphone'],
-  }
 
   const [selectedPart, setSelectedPart] = useState('neck')
   const [selectedStyle, setSelectedStyle] = useState('default')
