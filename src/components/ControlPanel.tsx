@@ -9,7 +9,7 @@ import './ControlPanel.scss'
 
 interface ControlPanelProps {}
 
-export const ControlPanel: React.FC<ControlPanelProps> = ({}) => {
+export const ControlPanel: React.FC<ControlPanelProps> = () => {
   const dispatch = useDispatch()
   const bodyPart = useSelector((state: State) => state.bodyPart)
   const { setBodyPart } = bindActionCreators(ActionCreators, dispatch)
@@ -34,6 +34,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({}) => {
       part: `${selectedPart}Path`,
       path: `/alpaca/${selectedPart}/${selectedStyle}.png`,
     })
+    // eslint-disable-next-line
   }, [selectedStyle])
 
   return (
