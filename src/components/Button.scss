@@ -1,0 +1,31 @@
+.component-button {
+  height: 44px;
+  padding: 12px 32px;
+  display: inline-block;
+  font-weight: bold;
+  border: 1px solid rgb(139, 183, 249);
+  border-radius: 30px;
+  color: rgb(139, 183, 249);
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  &.active {
+    background: rgb(42, 92, 167);
+    border: 1px solid rgb(42, 92, 167);
+    color: #fff;
+  }
+
+  &:hover {
+    border: 1px solid rgb(42, 92, 167);
+    color: rgb(42, 92, 167);
+
+    &.active {
+      color: #fff;
+    }
+  }
+}
