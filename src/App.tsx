@@ -8,7 +8,7 @@ import './App.scss'
 function App() {
   return (
     <div className="App">
-      <h1>Alpaca Image Generator</h1>
+      <h1 className="main-title">Alpaca Image Generator</h1>
       <div className="main-container">
         <Preview />
         <ControlPanel />

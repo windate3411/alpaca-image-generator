@@ -1,7 +1,9 @@
 .component-button {
-  height: 44px;
-  padding: 12px 32px;
-  display: inline-block;
+  height: 52px;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   border: 1px solid rgb(139, 183, 249);
   border-radius: 30px;
@@ -9,9 +11,14 @@
   outline: none;
   cursor: pointer;
   box-sizing: border-box;
+  font-size: 18px;
 
-  &::first-letter {
-    text-transform: uppercase;
+  .button-text {
+    flex: 0 1 auto;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 
   &.active {
@@ -27,5 +34,12 @@
     &.active {
       color: #fff;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .component-button {
+    height: 32px;
+    padding: 8px 16px;
   }
 }

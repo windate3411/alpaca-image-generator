@@ -28,3 +28,26 @@ h1 {
     }
   }
 }
+
+@media (max-width: 600px) {
+  body {
+    height: auto;
+  }
+
+  .main-title {
+    display: none;
+  }
+
+  .main-container {
+    width: 100%;
+    flex-direction: column;
+    padding: 12px;
+
+    > div {
+      &:first-of-type {
+        margin-right: 0px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

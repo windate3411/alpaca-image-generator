@@ -42,29 +42,33 @@ export const ControlPanel: React.FC<ControlPanelProps> = () => {
       <div className="component-control-panel">
         <section className="accessory-section">
           <h4 className="section-title">ACCESSORIZE THE ALPACA'S</h4>
-          {Object.keys(imageMapping).map((part: string) => {
-            return (
-              <Button
-                isActive={selectedPart === part}
-                text={formatDisplayedText(part)}
-                onClick={() => setSelectedPart(part)}
-                key={part}
-              />
-            )
-          })}
+          <div className="options-wrapper">
+            {Object.keys(imageMapping).map((part: string) => {
+              return part === 'backgrounds' ? null : (
+                <Button
+                  isActive={selectedPart === part}
+                  text={formatDisplayedText(part)}
+                  onClick={() => setSelectedPart(part)}
+                  key={part}
+                />
+              )
+            })}
+          </div>
         </section>
         <section className="style-section">
-          <h4 className="section-title">Style</h4>
-          {imageMapping[selectedPart].map((style: string) => {
-            return (
-              <Button
-                isActive={currentStyle === style}
-                text={formatDisplayedText(style)}
-                onClick={() => handleStyleButtonClick(style)}
-                key={style}
-              />
-            )
-          })}
+          <h4 className="section-title">STYLE</h4>
+          <div className="options-wrapper">
+            {imageMapping[selectedPart].map((style: string) => {
+              return (
+                <Button
+                  isActive={currentStyle === style}
+                  text={formatDisplayedText(style)}
+                  onClick={() => handleStyleButtonClick(style)}
+                  key={style}
+                />
+              )
+            })}
+          </div>
         </section>
       </div>
     </>

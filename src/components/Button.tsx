@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({ text, onClick, isActive }) => {
       className={`component-button ${isActive ? 'active' : ''}`}
       onClick={onClick}
     >
-      {text}
+      <span className="button-text">{text}</span>
     </div>
   )
 }

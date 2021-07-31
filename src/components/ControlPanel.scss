@@ -1,4 +1,8 @@
 .component-control-panel {
+  .options-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .component-button {
     margin: 0 8px 8px 0;
   }
@@ -8,6 +12,20 @@
 
     .section-title {
       margin-bottom: 16px;
+      font-weight: 900;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .component-control-panel {
+    section {
+      margin-bottom: 18px;
+
+      .section-title {
+        margin-bottom: 12px;
+        font-weight: 900;
+      }
     }
   }
 }
