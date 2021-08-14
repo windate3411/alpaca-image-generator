@@ -7,6 +7,7 @@ interface ButtonProps {
   isActive?: boolean
   onClick?: () => void
   icon?: React.ReactNode
+  type?: 'round' | 'square'
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -14,12 +15,14 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   isActive,
   icon,
+  type = 'round',
 }) => {
   return (
     <div
-      className={`component-button ${isActive ? 'active' : ''}`}
+      className={`component-button ${isActive ? 'active' : ''} ${type}`}
       onClick={onClick}
     >
+      {icon && <span className="btn-icon">{icon}</span>}
       <span className="button-text">{text}</span>
     </div>
   )

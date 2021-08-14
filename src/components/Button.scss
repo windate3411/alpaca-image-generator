@@ -12,6 +12,15 @@
   cursor: pointer;
   box-sizing: border-box;
   font-size: 18px;
+  overflow: hidden;
+
+  .btn-icon {
+    margin-right: 8px;
+
+    .conponent-icon {
+      vertical-align: middle;
+    }
+  }
 
   .button-text {
     flex: 0 1 auto;
@@ -21,18 +30,53 @@
     }
   }
 
-  &.active {
-    background: rgb(42, 92, 167);
-    border: 1px solid rgb(42, 92, 167);
-    color: #fff;
-  }
-
-  &:hover {
-    border: 1px solid rgb(42, 92, 167);
-    color: rgb(42, 92, 167);
+  &.round {
+    flex: 1 0 auto;
 
     &.active {
+      background: rgb(42, 92, 167);
+      border: 1px solid rgb(42, 92, 167);
       color: #fff;
+    }
+
+    &:hover {
+      border: 1px solid rgb(42, 92, 167);
+      color: rgb(42, 92, 167);
+
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+
+  &.square {
+    width: 48%;
+    padding: 18px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #222;
+
+    span {
+      transition: all 0.3s ease-in;
+    }
+
+    .button-text {
+      transform: translateX(-16px);
+    }
+
+    .btn-icon {
+      transform: translateX(-60px);
+    }
+
+    &:hover {
+      .button-text,
+      .btn-icon {
+        transform: translateX(0px);
+      }
     }
   }
 }

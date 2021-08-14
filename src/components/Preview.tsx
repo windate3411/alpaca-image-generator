@@ -6,7 +6,10 @@ import { getImage, downloadImage, getRandomItem } from '../utils'
 import { imageMapping } from '../types'
 import { BodyPartType } from '../state/reducers/bodyPart'
 import { ActionCreators, State } from '../state'
+import { Download as IconDownload } from '../components/icons/Download'
+import { Shuffle as IconShuffle } from '../components/icons/Shuffle'
 
+import { Button } from './Button'
 import './Preview.scss'
 
 interface PreviewProps {}
@@ -48,8 +51,18 @@ export const Preview: React.FC<PreviewProps> = () => {
         className="alpaca-preview"
       />
       <div className="footer-actions">
-        <button onClick={handleRandomBtnClick}>Random</button>
-        <button onClick={() => downloadImage(imgSrc)}>Download</button>
+        <Button
+          text="Random"
+          onClick={handleRandomBtnClick}
+          type="square"
+          icon={<IconShuffle />}
+        />
+        <Button
+          text="Download"
+          onClick={() => downloadImage(imgSrc)}
+          type="square"
+          icon={<IconDownload />}
+        />
       </div>
     </div>
   )
