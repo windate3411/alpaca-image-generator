@@ -13,6 +13,7 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-redux": "^7.1.18",
     "@types/redux-thunk": "^2.1.0",
+    "bootstrap-icons": "^1.5.0",
     "merge-images": "^2.0.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",

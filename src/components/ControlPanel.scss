@@ -2,6 +2,18 @@
   .options-wrapper {
     display: flex;
     flex-wrap: wrap;
+
+    .background-image {
+      height: 50px;
+      width: 50px;
+      margin: 0 5px 5px 0;
+      cursor: pointer;
+      transition: transform 0.1s ease-in;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
   }
   .component-button {
     margin: 0 8px 8px 0;
@@ -25,6 +37,13 @@
       .section-title {
         margin-bottom: 12px;
         font-weight: 900;
+      }
+    }
+
+    .options-wrapper {
+      .background-image {
+        height: 30px;
+        width: 30px;
       }
     }
   }

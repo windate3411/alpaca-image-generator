@@ -44,7 +44,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = () => {
           <h4 className="section-title">ACCESSORIZE THE ALPACA'S</h4>
           <div className="options-wrapper">
             {Object.keys(imageMapping).map((part: string) => {
-              return part === 'backgrounds' ? null : (
+              return (
                 <Button
                   isActive={selectedPart === part}
                   text={formatDisplayedText(part)}
@@ -59,7 +59,13 @@ export const ControlPanel: React.FC<ControlPanelProps> = () => {
           <h4 className="section-title">STYLE</h4>
           <div className="options-wrapper">
             {imageMapping[selectedPart].map((style: string) => {
-              return (
+              return selectedPart === 'backgrounds' ? (
+                <img
+                  className="background-image"
+                  src={`/alpaca/${selectedPart}/${style}.png`}
+                  onClick={() => handleStyleButtonClick(style)}
+                />
+              ) : (
                 <Button
                   isActive={currentStyle === style}
                   text={formatDisplayedText(style)}
