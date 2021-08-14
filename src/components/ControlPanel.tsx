@@ -63,6 +63,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = () => {
                 <img
                   className="background-image"
                   src={`/alpaca/${selectedPart}/${style}.png`}
+                  alt="alpaca-background"
                   onClick={() => handleStyleButtonClick(style)}
                 />
               ) : (

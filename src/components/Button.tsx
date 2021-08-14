@@ -1,5 +1,4 @@
-import React, { ReactComponentElement } from 'react'
-import { ReactElement } from 'react'
+import React from 'react'
 
 import './Button.scss'
 
